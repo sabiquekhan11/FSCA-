@@ -16,7 +16,7 @@ export default function Reviews() {
                 <div className="reviews-grid">
                     <div className="review-card">
                         <div className="review-stars">★★★★★</div>
-                        <p className="review-text">"The environment here is exceptional. Satish sir focuses deeply on individual technique. My batting has improved drastically since I joined the U-17 batch."</p>
+                        <p className="review-text">"The environment here is exceptional. Satish sir focuses deeply on individual technique. My batting has improved drastically since I joined the All Age Groups batch."</p>
                         <div className="review-author">- Janmejay Singh</div>
                     </div>
                     <div className="review-card">
