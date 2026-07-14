@@ -16,7 +16,7 @@ export default function Gallery() {
                         <img src="images/gallery-3.jpg" alt="Academy Champions with Trophies" />
                     </div>
                     <div className="gallery-item">
-                        <img src="images/gallery-4.jpg" alt="Academy Students" />
+                        <img src="images/gallery-4.png" alt="Academy Students" />
                     </div>
                     <div className="gallery-item">
                         <img src="images/gallery-5.jpg" alt="Fitness and Stretching Session" />
