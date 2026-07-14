@@ -8,7 +8,7 @@ export default function Coaches() {
                 </div>
                 <div className="about-grid">
                     <div className="about-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1577700203306-03f905fbab71?auto=format&fit=crop&q=80&w=600" alt="Satish Patnaik" className="about-image" style={{ filter: 'grayscale(0%)' }} />
+                        <img src="images/satish.jpg" alt="Satish Patnaik" className="about-image" style={{ filter: 'grayscale(0%)' }} />
                     </div>
                     <div className="coach-details">
                         <h3 className="coach-name" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--accent-primary)' }}>Satish Patnaik</h3>
