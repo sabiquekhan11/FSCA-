@@ -27,6 +27,16 @@ export default function Hostel() {
                     </div>
                 </div>
 
+                {/* Canteen Section */}
+                <div className="section-header center" style={{ marginTop: '4rem' }}>
+                    <h2 className="section-title">🍽️ Canteen</h2>
+                </div>
+                <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
+                    <p className="about-text" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+                        Our in-house canteen is dedicated to providing completely vegetarian, highly nutritious, and incredibly tasty meals for all our students. We maintain strict hygiene standards so players stay healthy, energized, and ready for intense practice sessions.
+                    </p>
+                </div>
+
                 {/* Premium CTA Card */}
                 <div style={{ 
                     background: 'linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-main) 100%)',
