@@ -13,8 +13,8 @@ export default function Hero() {
                 </h1>
                 <p className="hero-tagline">Elite youth training under Ex-Ranji Trophy player Satish Patnaik. Shape your cricketing future in Mirzapur.</p>
                 <div className="hero-cta">
-                    <Link href="#contact" className="btn btn-primary btn-large">Start Your Journey</Link>
-                    <a href="https://wa.me/917054540102?text=Hello%20Future%20Star%20Cricket%20Academy,%20I%20would%20like%20to%20book%20a%20session%20and%20inquire%20about%20admissions." className="btn btn-outline btn-large" target="_blank" rel="noreferrer">Book Now (WhatsApp)</a>
+                    <a href="https://wa.me/917054540102?text=Hello%20Future%20Star%20Cricket%20Academy,%20I%20would%20like%20to%20start%20my%20cricket%20journey%20with%20you." className="btn btn-primary btn-large" target="_blank" rel="noreferrer">Start Your Journey</a>
+                    <Link href="#contact" className="btn btn-outline btn-large">Send Enquiry</Link>
                 </div>
                 <div className="hero-stats">
                     <div className="stat-item">

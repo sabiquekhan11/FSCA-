@@ -20,6 +20,7 @@ export default function Footer() {
                         <li><Link href="#home">Home</Link></li>
                         <li><Link href="#about">About</Link></li>
                         <li><Link href="#facilities">Facilities</Link></li>
+                        <li><Link href="#hostel">Hostel</Link></li>
                     </ul>
                 </div>
                 <div className="footer-links-group">

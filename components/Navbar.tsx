@@ -38,6 +38,7 @@ export default function Navbar() {
                     <li><Link href="#home" onClick={closeMenu}>Home</Link></li>
                     <li><Link href="#about" onClick={closeMenu}>About</Link></li>
                     <li><Link href="#facilities" onClick={closeMenu}>Facilities</Link></li>
+                    <li><Link href="#hostel" onClick={closeMenu}>Hostel</Link></li>
                     <li><Link href="#coaches" onClick={closeMenu}>Coaches</Link></li>
                     <li><Link href="#reviews" onClick={closeMenu}>Reviews</Link></li>
                     <li><Link href="#contact" onClick={closeMenu}>Contact</Link></li>

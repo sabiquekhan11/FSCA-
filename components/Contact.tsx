@@ -3,26 +3,36 @@ import { useState } from 'react';
 
 export default function Contact() {
     const [buttonText, setButtonText] = useState('Submit Enquiry');
-    const [disabled, setDisabled] = useState(false);
-    const [success, setSuccess] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setButtonText('Sending...');
-        setDisabled(true);
+        
+        const formData = new FormData(e.currentTarget);
+        const name = formData.get('name');
+        const age = formData.get('age');
+        const phone = formData.get('phone');
+        const session = formData.get('session');
+        const message = formData.get('message');
+        
+        const whatsappMessage = `Hello Future Star Cricket Academy, I am interested in joining!
+        
+*Name:* ${name}
+*Age:* ${age}
+*Phone:* ${phone}
+*Preferred Session:* ${session}
+*Additional Message:* ${message ? message : 'N/A'}`;
 
-        // Mock API call
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const whatsappUrl = `https://wa.me/917054540102?text=${encodedMessage}`;
+        
+        window.open(whatsappUrl, '_blank');
+        
+        // Reset form visual state temporarily
+        setButtonText('Redirecting...');
         setTimeout(() => {
-            setButtonText('Enquiry Sent!');
-            setSuccess(true);
+            setButtonText('Submit Enquiry');
             (e.target as HTMLFormElement).reset();
-
-            setTimeout(() => {
-                setButtonText('Submit Enquiry');
-                setDisabled(false);
-                setSuccess(false);
-            }, 3000);
-        }, 1500);
+        }, 2000);
     };
 
     return (
@@ -49,36 +59,31 @@ export default function Contact() {
                     <form className="contact-form" id="enrollForm" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Full Name</label>
-                            <input type="text" id="name" required className="form-control" placeholder="Enter your name" />
+                            <input type="text" id="name" name="name" required className="form-control" placeholder="Enter your name" />
                         </div>
                         <div className="form-row">
                             <div className="form-group half">
                                 <label htmlFor="age">Age</label>
-                                <input type="number" id="age" required className="form-control" placeholder="e.g. 15" />
+                                <input type="number" id="age" name="age" required className="form-control" placeholder="e.g. 15" />
                             </div>
                             <div className="form-group half">
                                 <label htmlFor="phone">Phone Number</label>
-                                <input type="tel" id="phone" required className="form-control" placeholder="Your contact number" />
+                                <input type="tel" id="phone" name="phone" required className="form-control" placeholder="Your contact number" />
                             </div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="session">Preferred Session</label>
-                            <select id="session" className="form-control">
-                                <option value="day">Day Session</option>
-                                <option value="night">Night Session</option>
-                                <option value="undecided">Not Sure Yet</option>
+                            <select id="session" name="session" className="form-control">
+                                <option value="Day Session">Day Session</option>
+                                <option value="Night Session">Night Session</option>
+                                <option value="Not Sure Yet">Not Sure Yet</option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Message (Optional)</label>
-                            <textarea id="message" rows={4} className="form-control" placeholder="Tell us about your cricketing experience..."></textarea>
+                            <textarea id="message" name="message" rows={4} className="form-control" placeholder="Tell us about your cricketing experience..."></textarea>
                         </div>
-                        <button 
-                            type="submit" 
-                            className="btn btn-primary btn-block" 
-                            disabled={disabled}
-                            style={success ? { backgroundColor: 'var(--accent-secondary)' } : {}}
-                        >
+                        <button type="submit" className="btn btn-primary btn-block">
                             {buttonText}
                         </button>
                     </form>
