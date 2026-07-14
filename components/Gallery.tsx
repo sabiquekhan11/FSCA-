@@ -10,7 +10,7 @@ export default function Gallery() {
                         <img src="images/gallery-1.jpg" alt="Future Star Academy Team" />
                     </div>
                     <div className="gallery-item">
-                        <img src="images/gallery-2.jpg" alt="Academy Players at Nets" />
+                        <img src="images/gallery-2.png" alt="Academy Players at Nets" />
                     </div>
                     <div className="gallery-item">
                         <img src="images/gallery-3.jpg" alt="Academy Champions with Trophies" />
