@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { Hind, Rajdhani, Teko } from 'next/font/google';
+import { Teko, Rajdhani, Hind } from 'next/font/google';
 import './globals.css';
+import SecurityWrapper from '../components/SecurityWrapper';
 
 const hind = Hind({ 
     weight: ['400', '500', '600'], 
@@ -69,7 +70,9 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${hind.variable} ${rajdhani.variable} ${teko.variable}`}>
             <body>
-                {children}
+                <SecurityWrapper>
+                    {children}
+                </SecurityWrapper>
             </body>
         </html>
     );
