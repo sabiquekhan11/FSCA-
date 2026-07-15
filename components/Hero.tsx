@@ -9,7 +9,9 @@ export default function Hero() {
                 <h1 className="hero-title">
                     <span className="block">FUTURE STAR</span>
                     <span className="block text-accent">CRICKET</span>
-                    <span className="block">ACADEMY</span>
+                    <span className="block">
+                        ACADEMY <span style={{ fontSize: '0.4em', fontWeight: '500', color: 'var(--text-secondary, #94a3b8)', textTransform: 'none', verticalAlign: 'middle', letterSpacing: 'normal' }}>Mirzapur</span>
+                    </span>
                 </h1>
                 <p className="hero-tagline">Elite youth training under NIS Certified, Ex-Ranji Trophy player Satish Patnaik. Shape your cricketing future in Mirzapur.</p>
                 <div className="hero-cta">
